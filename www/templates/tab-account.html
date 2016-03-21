@@ -1,9 +1,27 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+<ion-view hide-nav-bar="true">
+  <ion-content class="padding center-content">
+
+    <h2>profile</h2>
+    <p>
+      You are <a href="#">#25,888</a> oi 25,888 in NYC. We determine our nest cities based on our waitlist signups.
+    </p>
+    <ion-list class="clean-list">
+      <ion-item class="item item-avatar">
+        <img src="img/adduser.png">
+        <div class="full-text"><a href="#">Refer</a> a friend to signup amd move up the waitelist faster</div>
+      </ion-item>
+      <ion-item class="item item-avatar">
+        <img src="img/edituser.png">
+        <div class="full-text"><a href="#">Edit</a> your profile and follow our tips to shorten your waite time</div>
+      </ion-item>
+      <ion-item class="item item-avatar">
+        <img src="img/enableuser.png">
+        <div class="full-text"><a href="#">Enable</a> push notifications so you knoe when you're off the waitelist</div>
+      </ion-item>
     </ion-list>
+    <button class="button button-block button-positive activated">Invite Friends</button>
+    <p class="description">
+      Global waitlist:You are<a href="#">25,888</a> of 25,856
+    </p>
   </ion-content>
 </ion-view>
