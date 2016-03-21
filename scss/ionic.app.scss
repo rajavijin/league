@@ -1,0 +1,80 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+$light:                           #fff !default;
+$stable:                          #9b9b9b !default;
+$positive:                        #26dbca !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #272727 !default;
+$black:                           #000000 !default;
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+@font-face {
+    font-family: gothic;
+    src: url(../fonts/craft.ttf);
+}
+
+//Custom Styles of League
+.home {
+  background: $black;
+  .logo {
+    padding: 20px 20px 20px 25px;
+    margin-top: 150px;
+  }
+  .get-started {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    left: 20px;
+    .button {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+.main-tabs {
+  .tabs {
+    .tab-item-active {
+      background: $black;
+    }
+  }
+}
+
+.center-content {
+  padding: 50px 50px 10px 50px;
+  .highlight-title {
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  .clean-list {
+    .item {
+      border: 0 none;
+      padding-bottom: 0px;
+    }
+  }
+  .full-text {
+    white-space: normal;
+    color: $black;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 15px;
+
+  }
+  .description {
+    color: $stable;
+  }
+}
