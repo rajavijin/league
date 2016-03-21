@@ -9764,9 +9764,10 @@ a.button {
 .profile .profile-icon {
   width: 75px; }
 
-.title-bar {
-  border-color: #fff !important; }
-  .title-bar .title.title-center {
+.bar.title-bar {
+  border-color: #fff !important;
+  background: none; }
+  .bar.title-bar .title.title-center {
     font-size: 40px;
     font-weight: normal;
     font-family: pictograph;
@@ -9774,7 +9775,8 @@ a.button {
 
 .clean-list .item {
   border: 0 none;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+  min-height: 60px; }
   .clean-list .item .input-label {
     color: #9b9b9b;
     font-size: 16px;
@@ -9786,3 +9788,6 @@ a.button {
 
 .center {
   text-align: center; }
+
+a {
+  text-decoration: none; }

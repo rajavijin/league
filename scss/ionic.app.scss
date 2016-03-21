@@ -86,8 +86,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 //Title bar styles
-.title-bar {
+.bar.title-bar {
   border-color: #fff !important;
+  background: none;
   .title.title-center {
     font-size: 40px;
     font-weight: normal;
@@ -103,6 +104,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   .item {
     border: 0 none;
     padding-bottom: 0px;
+    min-height: 60px;
     .input-label {
       color: $stable;
       font-size: 16px;
@@ -118,4 +120,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 .center {
   text-align: center;
+}
+
+a {
+  text-decoration: none;
 }
