@@ -57,6 +57,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.profile', {
+    url: '/profile',
+    views: {
+      'tab-profile': {
+        templateUrl: 'templates/tab-profile.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+
+  .state('tab.matches', {
+    url: '/matches',
+    views: {
+      'tab-matches': {
+        templateUrl: 'templates/tab-matches.html',
+        controller: 'DashCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
