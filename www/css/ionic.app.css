@@ -9748,9 +9748,6 @@ a.button {
     font-size: 38px;
     line-height: 40px;
     margin-bottom: 25px; }
-  .center-content .clean-list .item {
-    border: 0 none;
-    padding-bottom: 0px; }
   .center-content .full-text {
     white-space: normal;
     color: #000000;
@@ -9759,3 +9756,32 @@ a.button {
     line-height: 15px; }
   .center-content .description {
     color: #9b9b9b; }
+
+.profile .profile-image {
+  margin: 20px 0 10px;
+  border-radius: 15px; }
+
+.profile .profile-icon {
+  width: 75px; }
+
+.title-bar {
+  border-color: #fff !important; }
+  .title-bar .title.title-center {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: pictograph;
+    padding: 5px 0 0 0; }
+
+.clean-list .item {
+  border: 0 none;
+  padding-bottom: 0px; }
+  .clean-list .item .input-label {
+    color: #9b9b9b;
+    font-size: 16px;
+    font-family: pictograph;
+    font-style: italic; }
+  .clean-list .item .input-content {
+    color: #272727; }
+
+.center {
+  text-align: center; }

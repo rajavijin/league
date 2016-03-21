@@ -60,12 +60,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     line-height: 40px;
     margin-bottom: 25px;
   }
-  .clean-list {
-    .item {
-      border: 0 none;
-      padding-bottom: 0px;
-    }
-  }
+
   .full-text {
     white-space: normal;
     color: $black;
@@ -77,4 +72,49 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   .description {
     color: $stable;
   }
+}
+
+//profile page styles
+.profile {
+  .profile-image {
+    margin: 20px 0 10px;
+    border-radius: 15px;
+  }
+  .profile-icon {
+    width: 75px;
+  }
+}
+
+//Title bar styles
+.title-bar {
+  border-color: #fff !important;
+  .title.title-center {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: pictograph;
+    padding: 5px 0 0 0;
+  }
+}
+
+
+
+//common classes
+.clean-list {
+  .item {
+    border: 0 none;
+    padding-bottom: 0px;
+    .input-label {
+      color: $stable;
+      font-size: 16px;
+      font-family: pictograph;
+      font-style: italic;
+    }
+    .input-content {
+      color: $dark;
+    }
+  }
+}
+
+.center {
+  text-align: center;
 }
