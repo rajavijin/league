@@ -7,7 +7,7 @@ For example, you might change some of the default colors:
 $light:                           #fff !default;
 $stable:                          #9b9b9b !default;
 $positive:                        #26dbca !default;
-$calm:                            #11c1f3 !default;
+$calm:                            #efeff4 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
@@ -115,6 +115,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       color: $dark;
       white-space: normal;
     }
+  }
+}
+.item-checkbox {
+  padding-left: 10px;
+  .checkbox {
+    left: auto;
+  }
+  .checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+    background: none;
+  }
+  .checkbox input:after, .checkbox-icon:after {
+    border: 1px solid $positive;
+    border-top: 0;
+    border-right: 0;
   }
 }
 
