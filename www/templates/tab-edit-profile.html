@@ -2,36 +2,153 @@
   <ion-content class="padding profile">
     <div class="list clean-list">
       <label class="item item-input">
-        <span class="input-label">About me</span>
-        <div class="input-content">
-          Joly molly
-        </div>
+        <span class="input-label">Photos</span>
+        <div class="row">
+       <div class="col"><img src="img/img.png"></div>
+       <div class="col"><img src="img/img1.png"></div>
+       <div class="col"><img src="img/img2.png"></div>
+      <div class="col"><img src="img/img3.png"></div>
+      <div class="col"><img src="img/img4.png"></div>
+      <div class="col"><img src="img/img5.png"></div>
+      </div>
       </label>
-      <label class="item item-input item-icon-right">
+      <label class="item item-input">
+        <span class="input-label">About Me</span>
+        <label class="item-input-wrapper">
+      <input type="text" placeholder="">
+        </label>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Height</span>
+        <div class="item range range-positive">
+            <input type="range" name="volume" min="0" max="100" value="12">
+          </div>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Ethinicity</span>
+        <label class="item-input-wrapper">
+      <input type="text" placeholder="Native American">
+        </label>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Location</span>
+        <label class="item-input-wrapper">
+      <input type="text" placeholder="Midtown, New York">
+        </label>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Religion</span>
+        <label class="item-input-wrapper">
+      <input type="text" placeholder="None Stated">
+        </label>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Prefession</span>
+        <label class="item-input-wrapper">
+      <input type="text" placeholder="Founder @ Method Prep...">
+        </label>
+      </label>
+      <label class="item item-input">
         <span class="input-label"></span>
         <div class="input-content">
-          Joly molly
+          HEC Entrepreneurs @ HEC..
         </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+      </label>
+      <label class="item item-input">
+        <span class="input-label"></span>
+        <div class="input-content">
+          Consultant-Advisory @ P..
+        </div>
       </label>
       <label class="item item-input">
         <span class="input-label">Education</span>
         <div class="input-content">
-          HEC Paris • Round the world tour • AgroParisTech-Institutdes sciences et industries du vivant et de |'environnement
-                </div>
+          HEC Paris
+        </div>
       </label>
       <label class="item item-input">
-        <span class="input-label">Profession</span>
+        <span class="input-label"></span>
         <div class="input-content">
-          Founder @ Methode-Perpa.com • HEC Entrepreneurs @ HEC Paris • Consultant-Advisory @ PWC
-                </div>
+          Round The World Tour
+        </div>
       </label>
       <label class="item item-input">
+        <span class="input-label"></span>
+        <div class="input-content">
+          AgroParisTech - Istitude...
+        </div>
+      </label>
+      <label class="item item-input item-icon-right">
         <span class="input-label">Interests</span>
         <div class="input-content">
-          Enerysquare • MOTHERBOARD • M.Oscar • Product Hunt • AgroEntrepreneurs Student Orakeo • Foudre Bref How I Met Your Mother
-                </div>
+          Energysquare
+        </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
       </label>
+      <label class="item item-input item-icon-right">
+        <span class="input-label"></span>
+        <div class="input-content">
+          MOTHERBOARD
+        </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+      </label>
+      <label class="item item-input item-icon-right">
+        <span class="input-label"></span>
+        <div class="input-content">
+          L'Attlier Des Montres
+        </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+      </label>
+      <label class="item item-input item-icon-right">
+        <span class="input-label"></span>
+        <div class="input-content">
+          M.Oscar
+        </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+      </label>
+        <label class="item item-input item-icon-right">
+          <span class="input-label"></span>
+          <div class="input-content">
+            Product Hunt
+          </div>
+          <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+        </label>
+          <label class="item item-input item-icon-right">
+            <span class="input-label"></span>
+            <div class="input-content">
+               AgroEntrepreneurs Stu..
+            </div>
+            <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+          </label>
+            <label class="item item-input item-icon-right">
+              <span class="input-label"></span>
+              <div class="input-content">
+                 Orakeo
+              </div>
+              <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+            </label>
+              <label class="item item-input item-icon-right">
+                <span class="input-label"></span>
+                <div class="input-content">
+                    Foudre
+                </div>
+                <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+              </label>
+                <label class="item item-input item-icon-right">
+                  <span class="input-label"></span>
+                  <div class="input-content">
+                      Bref
+                  </div>
+                  <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+                </label>
+                  <label class="item item-input item-icon-right">
+                    <span class="input-label"></span>
+                    <div class="input-content">
+                        How Met Your Mother I
+                    </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+      </label>
+    <button class="button button-block button-positive activated" ng-click="next()">Add Interets</button>
     </div>
   </ion-content>
 </ion-view>

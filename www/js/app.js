@@ -108,6 +108,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+
   .state('tab.matches', {
     url: '/matches',
     views: {
@@ -139,6 +140,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/profile');
+  $urlRouterProvider.otherwise('/home');
 
 });

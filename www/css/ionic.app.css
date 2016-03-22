@@ -9773,6 +9773,9 @@ a.button {
     font-family: pictograph;
     padding: 5px 0 0 0; }
 
+.bar-header {
+  border-bottom-width: 0px; }
+
 .clean-list .item {
   border: 0 none;
   padding-bottom: 0px;

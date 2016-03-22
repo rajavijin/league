@@ -9,8 +9,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('EditProfileCtrl', function($scope) {
-
+  $scope.next = function() {
+    $state.go('screen1', {});
+  }
 })
+
 
 .controller('MatchesCtrl', function($scope) {
 
