@@ -38,6 +38,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     controller: 'HomeCtrl',
     templateUrl: 'templates/home.html'
   })
+  .state('screen1', {
+    url: '/screen1/:uid',
+    controller: 'Screen1Ctrl',
+    templateUrl: 'templates/screen1.html'
+  })
+
+  .state('screen2', {
+    url: '/screen2',
+    controller: 'Screen2Ctrl',
+    templateUrl: 'templates/screen2.html'
+  })
+
+  .state('screen3', {
+    url: '/screen3',
+    controller: 'Screen3Ctrl',
+    templateUrl: 'templates/screen3.html'
+  })
+
+  .state('screen4', {
+    url: '/screen4',
+    controller: 'Screen4Ctrl',
+    templateUrl: 'templates/screen4.html'
+  })
+
+  .state('screen5', {
+    url: '/screen5',
+    controller: 'Screen5Ctrl',
+    templateUrl: 'templates/screen5.html'
+  })
+  
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
@@ -47,22 +77,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.invite', {
+    url: '/invite',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-invite': {
+        templateUrl: 'templates/tab-invite.html',
+        controller: 'InviteCtrl'
       }
     }
   })
+
 
   .state('tab.profile', {
     url: '/profile',
     views: {
       'tab-profile': {
         templateUrl: 'templates/tab-profile.html',
-        controller: 'DashCtrl'
+        controller: 'ProfileCtrl'
       }
     }
   })
@@ -72,10 +103,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-matches': {
         templateUrl: 'templates/tab-matches.html',
-        controller: 'DashCtrl'
+        controller: 'MatchesCtrl'
       }
     }
   })
+
+    .state('tab.account', {
+      url: '/account',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-account.html',
+          controller: 'AccountCtrl'
+        }
+      }
+    })
 
   .state('tab.chats', {
       url: '/chats',
@@ -85,25 +126,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'ChatsCtrl'
         }
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
   });
 
   // if none of the above states are matched, use this as the fallback
