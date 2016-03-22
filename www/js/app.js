@@ -98,6 +98,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.editProfile', {
+    url: '/profile/edit/:uid',
+    views: {
+      'tab-profile': {
+        templateUrl: 'templates/tab-edit-profile.html',
+        controller: 'EditProfileCtrl'
+      }
+    }
+  })
+
   .state('tab.matches', {
     url: '/matches',
     views: {
@@ -129,6 +139,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/screen3');
+  $urlRouterProvider.otherwise('/tab/profile');
 
 });

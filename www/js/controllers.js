@@ -8,6 +8,10 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('EditProfileCtrl', function($scope) {
+
+})
+
 .controller('MatchesCtrl', function($scope) {
 
 })

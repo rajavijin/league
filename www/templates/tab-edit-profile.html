@@ -1,28 +1,18 @@
-<ion-view title="Profile">
+<ion-view title="Edit Profile">
   <ion-content class="padding profile">
-    <img class="full-image profile-image" src="img/user-profile.png" alt="" />
-    <div class="row">
-      <div class="col">
-        <img class="profile-icon" src="img/linkedin.png" alt="" />
-      </div>
-      <div class="col col-50 center">
-        <h2 class="title">Arthur C.</h2>
-        <p>
-          26 • Midtown • 5' 11"
-        </p>
-      </div>
-      <div class="col">
-        <a href="#/tab/profile/edit/1">
-          <img class="profile-icon" src="img/edit.png" alt="" />
-        </a>
-      </div>
-    </div>
     <div class="list clean-list">
       <label class="item item-input">
         <span class="input-label">About me</span>
         <div class="input-content">
           Joly molly
         </div>
+      </label>
+      <label class="item item-input item-icon-right">
+        <span class="input-label"></span>
+        <div class="input-content">
+          Joly molly
+        </div>
+        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
       </label>
       <label class="item item-input">
         <span class="input-label">Education</span>
