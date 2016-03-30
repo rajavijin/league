@@ -1,12 +1,10 @@
 <ion-view title="Preferences">
   <ion-content class="padding profile">
-
-    <div class="list clean-list">
-      <div class="list clean-list">
+    <div class="list clean-form">
       <label class="item item-input">
-        <span class="input-label">Gender</span>
-        <div class="button-bar">
-        <a class="button">Women</a>
+        <span class="input-label">Looking For</span>
+        <div class="button-bar bar-positive">
+        <a class="button active">Women</a>
         <a class="button">Men</a>
         <a class="button">Both</a>
        </div>
@@ -14,19 +12,24 @@
       <label class="item item-input">
         <span class="input-label">Age</span>
         <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="100" value="12">
-          </div>
+          <rzslider rz-slider-model="age.minValue"
+          rz-slider-high="age.maxValue"
+          rz-slider-options="age.options"></rzslider>
+        </div>
       </label>
       <label class="item item-input">
         <span class="input-label">Height</span>
         <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="100" value="12">
+          <rzslider rz-slider-model="height.minValue"
+          rz-slider-high="height.maxValue"
+          rz-slider-options="height.options"></rzslider>
           </div>
       </label>
       <label class="item item-input">
         <span class="input-label">Distance</span>
         <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="100" value="12">
+          <rzslider rz-slider-model="distance.value"
+          rz-slider-options="distance.options"></rzslider>
           </div>
       </label>
       <label class="item item-input">
@@ -48,7 +51,12 @@
       <input type="text" placeholder="No Preference">
         </label>
       </label>
-      <button class="button button-block button-positive activated" ng-click="next()">Join the league</button>
+      <label class="item item-input">
+        <span class="input-label"></span>
+        <label class="">
+          <button class="button button-block button-positive activated" ng-click="next()">Join the league</button>
+        </label>
+      </label>
 
       </label>
     </div>

@@ -1,18 +1,21 @@
 <ion-view title="About Me">
-  <ion-content class="padding profile">
+  <ion-content class="padding about-me">
 
-    <div class="list clean-list">
+    <div class="list clean-form">
       <label class="item item-input">
         <span class="input-label">Gender</span>
-        <div class="button-bar">
-        <a class="button">Female</a>
+        <div class="button-bar bar-positive">
+        <a class="button active">Female</a>
         <a class="button">Male</a>
        </div>
       </label>
+
       <label class="item item-input">
         <span class="input-label">Height</span>
         <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="100" value="12">
+          <rzslider rz-slider-model="height.minValue"
+          rz-slider-high="height.maxValue"
+          rz-slider-options="height.options"></rzslider>
           </div>
       </label>
       <label class="item item-input">
@@ -33,7 +36,12 @@
       <input type="text" placeholder="None Stated">
         </label>
       </label>
-      <button class="button button-block button-positive activated" ng-click="next()">Save and Next</button>
+      <label class="item item-input">
+        <span class="input-label"></span>
+        <label class="">
+          <button class="button button-block button-positive activated" ng-click="next()">Save and Next</button>
+        </label>
+      </label>
 
       </label>
     </div>

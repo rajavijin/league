@@ -9,12 +9,14 @@ $stable:                          #9b9b9b !default;
 $positive:                        #26dbca !default;
 $calm:                            #efeff4 !default;
 $balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
+$energized:                       #c2b378 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #272727 !default;
 $black:                           #000000 !default;
+$lightdark:                       #222222 !default;
 
+$defaultFont: 15px;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -23,8 +25,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 @font-face {
-    font-family: gothic;
-    src: url(../fonts/craft.ttf);
+    font-family: gothicRegular;
+    src: url(../fonts/LeagueGothic-Regular.otf);
+}
+@font-face {
+    font-family: gothicItalic;
+    src: url(../fonts/LeagueGothic-Italic.otf);
+}
+@font-face {
+    font-family: gothicCondensed;
+    src: url(../fonts/LLeagueGothic-CondensedRegular.otf);
+}
+@font-face {
+    font-family: gothicCondensedItalic;
+    src: url(../fonts/LeagueGothic-CondensedItalic.otf);
+}
+//overrite css
+body {
+  font-size: $defaultFont;
 }
 
 //Custom Styles of League
@@ -51,37 +69,59 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       background: $black;
     }
   }
+  .sub-tabs {
+    .tab-item-active {
+      background: none;
+      border-bottom: 2px solid $dark;
+    }
+  }
 }
 
 .center-content {
   padding: 50px 50px 10px 50px;
+  color: $lightdark;
   .highlight-title {
-    font-size: 38px;
-    line-height: 40px;
-    margin-bottom: 25px;
+    font-size: 67px;
+    line-height: 67px;
+    margin-bottom: 20px;
+    font-family: gothicRegular;
   }
-
   .full-text {
     white-space: normal;
-    color: $black;
-    font-size: 13px;
-    text-align: justify;
-    line-height: 15px;
-
-  }
-  .description {
-    color: $stable;
+    font-size: $defaultFont;
+    line-height: 22px;
+    color: $lightdark;
   }
 }
 
+.description {
+  color: $stable;
+  text-align: center;
+}
+.row-clean {
+  .row {
+    padding: 0px;
+    .col {
+      padding: 0px;
+    }
+  }
+}
 //profile page styles
 .profile {
   .profile-image {
     margin: 20px 0 10px;
     border-radius: 15px;
   }
+  .profile-title.row {
+    padding: 0;
+  }
+  .profile-title {
+    .col {
+      padding: 0;
+    }
+  }
   .profile-icon {
-    width: 75px;
+    width: 100%;
   }
 }
 
@@ -92,26 +132,30 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   .title.title-center {
     font-size: 40px;
     font-weight: normal;
-    font-family: pictograph;
+    font-family: gothicCondensed;
     padding: 5px 0 0 0;
+    min-height: 556x;
   }
 }
 .bar-header {
-      border-bottom-width: 0px;
+  border-bottom-width: 0px;
 }
 
 
 
 //common classes
 .clean-list {
+  .list {
+    padding-bottom: 30px;
+  }
   .item {
     border: 0 none;
-    padding-bottom: 0px;
+    padding: 16px 0 0 68px;
     min-height: 60px;
     .input-label {
       color: $stable;
       font-size: 16px;
-      font-family: pictograph;
+      font-family: gothicCondensed;
       font-style: italic;
     }
     .input-content {
@@ -119,6 +163,80 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       white-space: normal;
     }
   }
+}
+//clean form
+.clean-form {
+  .row {
+    line-height: 24px;
+    .thumb {
+      width: 98%;
+      border-radius: 5px;
+      padding: 0% 2% 2% 2%;
+    }
+  }
+  .input-label {
+    color: $stable;
+    font-size: 16px;
+    font-family: gothicCondensed;
+    font-style: italic;
+    width: 26%;
+    text-align: right;
+    text-overflow: ellipsis;
+  }
+  .item {
+    border: 0 none;
+    line-height: 58px;
+    padding: 15px 20px 5px 0px;
+    .input-content {
+      color: $dark;
+      white-space: normal;
+      line-height: 22px;
+    }
+    .item-input-wrapper {
+      padding: 8px 5px;
+      background-color: $calm;
+      border-radius: 6px;
+      input {
+        font-size: 16px;
+      }
+    }
+    .range {
+      width: 100%;
+      .input-content {
+        width: 100%;
+      }
+      input {
+        width: 98%;
+        position: relative;
+        top: -8px;
+      }
+    }
+    .button-bar {
+      padding: 2px;
+      background: $positive;
+      border-radius: 5px;
+      .button {
+        min-height: 30px;
+        line-height: 30px;
+      }
+      .active {
+        background: $light;
+        color: $positive;
+      }
+    }
+  }
+  .item-list {
+    line-height: 5px;
+    padding: 10px 0 15px 0px;
+  }
+}
+.item-divider {
+  color: $dark;
+font-weight: 500;
+padding: 20px 16px;
+font-family: serif;
+font-style: italic;
+font-size: 18px;
 }
 .item-checkbox {
   padding-left: 10px;
@@ -134,6 +252,45 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     border-right: 0;
   }
 }
+//overrite clean form
+.about-me {
+  .clean-form {
+    .input-label {
+      // width: 20%;
+    }
+  }
+}
+//chat list css
+.chat-list {
+    .col-icon {
+      margin-top: 10%;
+    }
+    .col-image {
+      img {
+        border-radius: 5px;
+      }
+    }
+    .col-content {
+      line-height: 23px;
+      .chat-league {
+        color: $stable;
+      }
+    }
+}
+.chat-box {
+  padding-bottom: 10px;
+  .chat-text {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+  }
+  .chat-submit {
+    padding: 0px 0 0 10px;
+    .button {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
 
 .center {
   text-align: center;
@@ -141,4 +298,185 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 a {
   text-decoration: none;
+}
+.has-header-details {
+  padding-top: 105px;
+}
+.messages {
+  display: -webkit-box !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-align-content: center !important;
+  -ms-flex-line-pack: center !important;
+  align-content: center !important;
+  -webkit-box-align: center !important;
+  -moz-box-align: center !important;
+  -webkit-align-items: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+  margin-bottom: 20px !important;
+  .message {
+    -webkit-box-flex: 1 !important;
+    -moz-box-flex: 1 !important;
+    -webkit-flex: 1 1 auto !important;
+    -ms-flex: 1 1 auto !important;
+    flex: 1 1 auto !important;
+    padding: 10px !important;
+    -webkit-transition: all 250ms ease-in-out !important;
+    transition: all 250ms ease-in-out !important;
+    overflow: hidden !important;
+    text-align: left !important;
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -moz-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+    .user-icon {
+      width: 32px;
+      border-radius: 5px;
+    }
+    span {
+      background: #FFF !important;
+      display: inline-block !important;
+      color: $lightdark !important;
+      padding: 10px !important;
+      border-radius: 10px !important;
+      text-align: left !important;
+      max-width: 240px !important;
+      vertical-align: top;
+      border: 1px solid $calm;
+      border-radius: 5px;
+    }
+  }
+}
+
+//This will change
+img.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+}
+
+img.profile-pic.left {
+  left: 10px;
+}
+
+img.profile-pic.right {
+  right: 10px;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-detail {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important;
+}
+
+.message-wrapper {
+  position: relative;
+}
+
+.message-wrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.chat-bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  margin: 10px;
+  max-width: 80%;
+}
+
+.chat-bubble.left {
+  border: 1px solid #e6e5eb;
+  float: left;
+  margin-left: 55px;
+}
+
+
+.chat-bubble.right {
+  border:1px solid #158ffe;
+  float: right;
+  margin-right: 55px;
+}
+
+.chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px;
+}
+
+.msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cf {
+  clear: both !important;
+}
+
+a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+}
+
+/* loading */
+.loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader .ion-loading-c {
+  font-size: 64px;
 }

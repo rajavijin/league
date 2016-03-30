@@ -1,27 +1,39 @@
 <ion-view title="Edit Profile">
   <ion-content class="padding profile">
-    <div class="list clean-list">
-      <label class="item item-input">
-        <span class="input-label">Photos</span>
-        <div class="row">
-       <div class="col"><img src="img/img.png"></div>
-       <div class="col"><img src="img/img1.png"></div>
-       <div class="col"><img src="img/img2.png"></div>
-      <div class="col"><img src="img/img3.png"></div>
-      <div class="col"><img src="img/img4.png"></div>
-      <div class="col"><img src="img/img5.png"></div>
+    <div class="list clean-form">
+      <div class="row">
+        <div class="col col-25">
+          <span class="input-label">Photos</span>
+        </div>
+        <div class="col col-75 row-clean">
+          <div class="row">
+            <div class="col"><img class="thumb" src="img/img.png"></div>
+            <div class="col"><img class="thumb" src="img/img1.png"></div>
+            <div class="col"><img class="thumb" src="img/img2.png"></div>
+          </div>
+          <div class="row">
+            <div class="col"><img class="thumb" src="img/img3.png"></div>
+            <div class="col"><img class="thumb" src="img/img4.png"></div>
+            <div class="col"><img class="thumb" src="img/img5.png">
+            </div>
+          </div>
+          <span class="description">
+            Tap to change, hold to reorder
+          </span>
+        </div>
       </div>
-      </label>
       <label class="item item-input">
         <span class="input-label">About Me</span>
         <label class="item-input-wrapper">
-      <input type="text" placeholder="">
+      <textarea class="calm-bg" name="about-me" rows="2" cols="40"></textarea>
         </label>
       </label>
       <label class="item item-input">
         <span class="input-label">Height</span>
         <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="100" value="12">
+          <rzslider rz-slider-model="height.minValue"
+          rz-slider-high="height.maxValue"
+          rz-slider-options="height.options"></rzslider>
           </div>
       </label>
       <label class="item item-input">
@@ -60,93 +72,101 @@
           Consultant-Advisory @ P..
         </div>
       </label>
-      <label class="item item-input">
+      <label class="item item-input item-list">
         <span class="input-label">Education</span>
         <div class="input-content">
           HEC Paris
         </div>
       </label>
-      <label class="item item-input">
+      <label class="item item-input item-list">
         <span class="input-label"></span>
         <div class="input-content">
           Round The World Tour
         </div>
       </label>
-      <label class="item item-input">
+      <label class="item item-input item-list">
         <span class="input-label"></span>
         <div class="input-content">
           AgroParisTech - Istitude...
         </div>
+
       </label>
-      <label class="item item-input item-icon-right">
+      <label class="item item-input item-list">
+        <span class="input-label"></span>
+        <div class="description">
+          Job and school edited via Linkedin
+        </div>
+
+      </label>
+      <label class="item item-input item-icon-right item-list">
         <span class="input-label">Interests</span>
         <div class="input-content">
           Energysquare
         </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+        <i class="icon ion-ios-close energized" ng-click="delete()"></i>
       </label>
-      <label class="item item-input item-icon-right">
+      <label class="item item-input item-icon-right item-list">
         <span class="input-label"></span>
         <div class="input-content">
           MOTHERBOARD
+          <i class="icon ion-ios-close energized" ng-click="delete()"></i>
         </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
       </label>
-      <label class="item item-input item-icon-right">
+      <label class="item item-input item-icon-right item-list">
         <span class="input-label"></span>
         <div class="input-content">
           L'Attlier Des Montres
         </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+        <i class="icon ion-ios-close energized" ng-click="delete()"></i>
       </label>
-      <label class="item item-input item-icon-right">
+      <label class="item item-input item-icon-right item-list">
         <span class="input-label"></span>
         <div class="input-content">
           M.Oscar
         </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+        <i class="icon ion-ios-close energized" ng-click="delete()"></i>
       </label>
-        <label class="item item-input item-icon-right">
+        <label class="item item-input item-icon-right item-list">
           <span class="input-label"></span>
           <div class="input-content">
             Product Hunt
           </div>
-          <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+          <i class="icon ion-ios-close energized" ng-click="delete()"></i>
         </label>
-          <label class="item item-input item-icon-right">
+          <label class="item item-input item-icon-right item-list">
             <span class="input-label"></span>
             <div class="input-content">
                AgroEntrepreneurs Stu..
             </div>
-            <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+            <i class="icon ion-ios-close energized" ng-click="delete()"></i>
           </label>
-            <label class="item item-input item-icon-right">
+            <label class="item item-input item-icon-right item-list">
               <span class="input-label"></span>
               <div class="input-content">
                  Orakeo
               </div>
-              <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+              <i class="icon ion-ios-close energized" ng-click="delete()"></i>
             </label>
-              <label class="item item-input item-icon-right">
+              <label class="item item-input item-icon-right item-list">
                 <span class="input-label"></span>
                 <div class="input-content">
                     Foudre
                 </div>
-                <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+                <i class="icon ion-ios-close energized" ng-click="delete()"></i>
               </label>
-                <label class="item item-input item-icon-right">
+                <label class="item item-input item-icon-right item-list">
                   <span class="input-label"></span>
                   <div class="input-content">
                       Bref
                   </div>
-                  <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+                  <i class="icon ion-ios-close energized" ng-click="delete()"></i>
                 </label>
-                  <label class="item item-input item-icon-right">
+                  <label class="item item-input item-icon-right item-list">
                     <span class="input-label"></span>
                     <div class="input-content">
                         How Met Your Mother I
                     </div>
-        <i class="icon ion-ios-close positive" ng-click="delete()"></i>
+        <i class="icon ion-ios-close energized" ng-click="delete()"></i>
       </label>
     <button class="button button-block button-positive activated" ng-click="next()">Add Interets</button>
     </div>

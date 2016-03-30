@@ -1,74 +1,133 @@
-<ion-view view-title="settings">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-divider">
-        My Stats
-      </ion-item>
-      <ion-item>
-        <h2>VIP Ticket Remaining</h2>
-        <span class="badge">0</span>
-      </ion-item>
-      <ion-item>
-        <h2>Friends in The League</h2>
-        <span class="badge">7</span>
-      </ion-item>
-      <ion-item>
-        <h2>Number of Referrals</h2>
-        <span class="badge">0</span>
-      </ion-item>
-      <ion-item>
-        <h2>Date of Joined</h2>
-        <span class="badge">3/19/16</span>
-      </ion-item>
-      <ion-item class="item-divider">
-        Notifications
-      </ion-item>
-        <li class="item item-toggle">
-       Happy Hour
-       <label class="toggle toggle-calm">
-         <input type="checkbox">
-         <div class="track">
-           <div class="handle"></div>
-         </div>
-         <li class="item item-toggle">
-        New Match
-        <label class="toggle toggle-calm">
-          <input type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-          <li class="item item-toggle">
-         Concierge Messages
-         <label class="toggle toggle-toggle toggle-calm">
-           <input type="checkbox">
-           <div class="track">
-             <div class="handle"></div>
-           </li>
-             <ion-item class="item-divider">
-               About The League
-             </ion-item>
-             <ion-item>
-               <h2>Privacy Policy</h2>
-               <span class="badge">></span>
-             </ion-item>
-             <ion-item>
-               <h2>Terms of Service</h2>
-               <span class="badge">></span>
-             </ion-item>
-             <ion-item>
-               <h2>Current Version</h2>
-               <span class="badge">2.0.2(build 82)</span>
-             </ion-item>
-             <ion-item class="item-divider">
-               Actions
-             </ion-item>
-             <button class="button button-clear button-calm">Invite Friends</button>
-             <button class="button button-clear button-calm">button-calm</button>
-             <button class="button button-clear button-calm">button-calm</button>
-             <button class="button button-clear button-calm">button-calm</button>
-             <button class="button button-clear button-calm">button-calm</button>
-           </div>
-       </label>
-    </ion-list>
-  </ion-content>
+<ion-view title="Matches">
+  <ion-tabs class="sub-tabs tabs-top tabs-light">
+
+    <ion-tab title="Recent">
+      <ion-view>
+        <ion-content has-header="true" class="calm-bg">
+          <ion-list class="chat-list">
+            <ion-item ng-click="goto('recent')">
+              <div class="row">
+                <div class="col col-10 col-icon">
+                  <i class="icon ion-record positive"></i>
+                </div>
+                <div class="col col-30 col-image">
+                  <img class="full-image" src="img/ben.png" alt="" />
+                </div>
+                <div class="col col-60 col-content">
+                  <h2 class="title">Concierge</h2>
+                  <p>
+                    26 • Midtown • 5' 11"
+                  </p>
+                  <p class="chat-league">
+                    The League • UCLA
+                  </p>
+                  <a href="#">Welcome to the League!</a>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+          <p class="description padding">
+            Matches expire in 21 days
+          </p>
+        </ion-content>
+      </ion-view>
+    </ion-tab>
+
+    <ion-tab title="Best Match">
+      <ion-view>
+        <ion-content has-header="true" class="calm-bg">
+          <ion-list class="chat-list">
+            <ion-item ng-click="goto('recent')">
+              <div class="row">
+                <div class="col col-10 col-icon">
+                  <i class="icon ion-record positive"></i>
+                </div>
+                <div class="col col-30 col-image">
+                  <img class="full-image" src="img/adam.jpg" alt="" />
+                </div>
+                <div class="col col-60 col-content">
+                  <h2 class="title">Concierge</h2>
+                  <p>
+                    26 • Midtown • 5' 11"
+                  </p>
+                  <p class="chat-league">
+                    The League • UCLA
+                  </p>
+                  <a href="#">Welcome to the League!</a>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+          <p class="description padding">
+            Matches expire in 8 days
+          </p>
+        </ion-content>
+      </ion-view>
+    </ion-tab>
+
+    <ion-tab title="Popular">
+      <ion-view>
+        <ion-content has-header="true" class="calm-bg">
+          <ion-list class="chat-list">
+            <ion-item ng-click="goto('recent')">
+              <div class="row">
+                <div class="col col-10 col-icon">
+                  <i class="icon ion-record positive"></i>
+                </div>
+                <div class="col col-30 col-image">
+                  <img class="full-image" src="img/max.png" alt="" />
+                </div>
+                <div class="col col-60 col-content">
+                  <h2 class="title">Max</h2>
+                  <p>
+                    26 • Midtown • 5' 11"
+                  </p>
+                  <p class="chat-league">
+                    The League • UCLA
+                  </p>
+                  <a href="#">Welcome to the League!</a>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+          <p class="description padding">
+            Matches expire in 2 days
+          </p>
+        </ion-content>
+      </ion-view>
+    </ion-tab>
+
+    <ion-tab title="Least Flaky">
+      <ion-view>
+        <ion-content has-header="true" class="calm-bg">
+          <ion-list class="chat-list">
+            <ion-item ng-click="goto('recent')">
+              <div class="row">
+                <div class="col col-10 col-icon">
+                  <i class="icon ion-record positive"></i>
+                </div>
+                <div class="col col-30 col-image">
+                  <img class="full-image" src="img/mike.png" alt="" />
+                </div>
+                <div class="col col-60 col-content">
+                  <h2 class="title">Mike</h2>
+                  <p>
+                    26 • Midtown • 5' 11"
+                  </p>
+                  <p class="chat-league">
+                    The League • UCLA
+                  </p>
+                  <a href="#">Welcome to the League!</a>
+                </div>
+              </div>
+            </ion-item>
+          </ion-list>
+          <p class="description padding">
+            Matches expire in 10 days
+          </p>
+        </ion-content>
+      </ion-view>
+    </ion-tab>
+
+  </ion-tabs>
 </ion-view>

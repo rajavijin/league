@@ -1,0 +1,159 @@
+<ion-view id="userMessagesView"
+		cache-view="false" title="">
+
+	<div class="loader-center" ng-if="!doneLoading">
+			<div class="loader">
+				<i class="icon ion-loading-c"></i>
+			</div>
+	</div>
+	<ion-list class="chat-list">
+		<ion-item>
+			<div class="row">
+				<div class="col col-10 col-icon">
+					<button class="button button-icon" ng-click="goBack()" >
+						<i class="icon ion-ios-arrow-back"></i>
+					</button>
+				</div>
+				<div class="col col-30 col-image">
+					<img class="full-image" src="img/ben.png" alt="" />
+				</div>
+				<div class="col col-60 col-content">
+					<h2 class="title">Concierge</h2>
+					<p>
+						26 • Midtown • 5' 11"
+					</p>
+					<p class="chat-league">
+						The League • UCLA
+					</p>
+					<a href="#">Welcome to the League!</a>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+		<ion-content has-bouncing="true" class="has-header has-header-details has-footer"
+				delegate-handle="userMessageScroll">
+				<p class="description center padding">
+					Today, 19:25
+				</p>
+
+				<div ng-repeat="message in messages" class="message-wrapper"
+						>
+
+						<div ng-if="user._id !== message.userId">
+
+							<img ng-click="viewProfile(message)" class="profile-pic left"
+										ng-src="{{toUser.pic}}" onerror="onProfilePicError(this)" />
+
+								<div class="chat-bubble left">
+
+										<div class="message" ng-bind-html="message.text | nl2br" autolinker>
+										</div>
+
+										<div class="message-detail">
+												<span ng-click="viewProfile(message)"
+														class="bold">{{toUser.username}}</span>,
+												<span am-time-ago="message.date"></span>
+										</div>
+
+								</div>
+						</div>
+
+						<div ng-if="user._id === message.userId">
+
+								 <img ng-click="viewProfile(message)" class="profile-pic right"
+										ng-src="{{user.pic}}" onerror="onProfilePicError(this)" />
+
+								<div class="chat-bubble right">
+
+										<div class="message" ng-bind-html="message.text | nl2br" autolinker>
+										</div>
+
+										<div class="message-detail">
+												<span ng-click="viewProfile(message)"
+														class="bold">{{user.username}}</span>,
+												<span am-time-ago="message.date"></span>
+										</div>
+
+								</div>
+
+						</div>
+
+						<div class="cf"></div>
+
+				</div>
+		</ion-content>
+
+		<form name="sendMessageForm" ng-submit="sendMessage(sendMessageForm)" novalidate>
+			<ion-footer-bar class="row chat-box bar-calm"  keyboard-attach>
+				<textarea ng-model="input.message" class="col col-80 chat-text" required minlength="1" maxlength="1500" msd-elastic></textarea>
+				<div class="buttons col col-20 chat-submit" ng-click="doSomething()">
+					<button class="button button-clear button-positive" ng-disabled="!input.message || input.message === ''">Send</button>
+				</div>
+			</ion-footer-bar>
+				<!-- <ion-footer-bar class="bar-stable item-input-inset message-footer">
+						<label class="item-input-wrapper">
+								<textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+						</label>
+						<div class="footer-btn-wrap">
+							<button class="button button-icon icon ion-android-send footer-btn" type="submit"
+									ng-disabled="!input.message || input.message === ''">
+							</button>
+						</div>
+				</ion-footer-bar> -->
+		</form>
+
+</ion-view>
+<!-- <ion-view hide-nav-bar="true">
+	<ion-content class="content-stable" has-bouncing="true" class="has-header has-footer">
+    <ion-list class="chat-list">
+      <ion-item>
+        <div class="row">
+          <div class="col col-10 col-icon">
+            <button class="button button-icon" ng-click="goBack()" >
+              <i class="icon ion-ios-arrow-back"></i>
+            </button>
+          </div>
+          <div class="col col-30 col-image">
+            <img class="full-image" src="img/ben.png" alt="" />
+          </div>
+          <div class="col col-60 col-content">
+            <h2 class="title">Concierge</h2>
+            <p>
+              26 • Midtown • 5' 11"
+            </p>
+            <p class="chat-league">
+              The League • UCLA
+            </p>
+            <a href="#">Welcome to the League!</a>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+    <p class="description center padding">
+      Today, 19:25
+    </p>
+    <div class="messages other">
+
+      <div class="message">
+        <img class="user-icon" src="img/ben.png" alt="" />
+        <span>this is other message</span>
+      </div>
+
+    </div>
+    <div class="messages">
+
+      <div class="message">
+        <img class="user-icon" src="img/max.png" alt="" />
+        <span>this is my message</span>
+      </div>
+
+    </div>
+  </ion-content>
+
+  <ion-footer-bar class="row chat-box bar-calm">
+    <input class="col col-80 chat-text" type="text" name="name" value="">
+    <div class="buttons col col-20 chat-submit" ng-click="doSomething()">
+      <button class="button button-clear button-positive">Send</button>
+    </div>
+  </ion-footer-bar>
+</ion-view> -->
